@@ -19,7 +19,7 @@ def setup_browser(request):
     }
 
     driver = webdriver.Remote(
-        command_executor="https://selenoid.autotests.cloud/wd/hub",
+        command_executor="https://selenoid.autotests.cloud/#/sessions/f534fae9e7a68620b8e1347b78472051",
         desired_capabilities=capabilities)
 
     driver.maximize_window()
