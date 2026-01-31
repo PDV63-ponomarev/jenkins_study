@@ -19,7 +19,7 @@ def test_successful(setup_browser):
         browser.element("#firstName").set_value(first_name)
         browser.element("#lastName").set_value(last_name)
         browser.element("#userEmail").set_value("random@mail.ru")
-        browser.element("#genterWrapper").element(by.text("Mail")).click()
+        browser.element("#genterWrapper").element(by.text("Male")).click()
         browser.element("#userNumber").set_value("8800123456")
         browser.element("#currentAddress").set_value("Россия, г. Мытищи, Ленинская ул., д. 16 кв.194")
         browser.element("#state").click()
