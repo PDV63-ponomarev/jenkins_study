@@ -9,22 +9,38 @@ from selene import Browser, Config
 @pytest.fixtrue(scope='function')
 def setup_browser(request):
 
-    options = Options()
-    capabilselenoid_capabilitieities = {
+    # options = Options()
+    # capabilselenoid_capabilitieities = {
+    #     "browserName": "chrome",
+    #     "browserVersion": "128.0",
+    #     "selenoid:options": {
+    #         "enableVNC": True,
+    #         "enableVideo": True
+    #     }
+    # }
+    #
+    # options.capabilities.update(selenoid_capabilitie)
+    # driver = webdriver.Remote(
+    #     command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
+    #     desired_capabilities=capabilities)
+    #
+    # browser = Browser(Config(driver))
+    # yield browser
+    #
+    # browser.quit()
+
+
+    capabilities = {
         "browserName": "chrome",
         "browserVersion": "128.0",
         "selenoid:options": {
-            "enableVNC": True,
             "enableVideo": True
         }
     }
 
-    options.capabilities.update(selenoid_capabilitie)
     driver = webdriver.Remote(
-        command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
+        command_executor="https://selenoid.autotests.cloud/wd/hub",
         desired_capabilities=capabilities)
 
-    browser = Browser(Config(driver))
     yield browser
-
     browser.quit()
