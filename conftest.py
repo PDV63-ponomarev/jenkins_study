@@ -6,7 +6,7 @@ from selene import Browser, Config
 
 # from utils import attach
 
-@pytest.fixtrue(scope='function')
+@pytest.fixture(scope='function')
 def setup_browser(request):
 
     options = Options()
