@@ -23,11 +23,7 @@ def setup_browser(request):
         options=options
     )
 
-    driver.maximize_window()
-    
     browser = Browser(Config(driver))
-
-
     yield browser
 
     attach.add_screenshot(browser)
