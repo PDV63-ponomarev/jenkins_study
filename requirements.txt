@@ -1,5 +1,5 @@
 pytest==8.4.1
 allure-pytest==2.15.0
-selene==2.0.0rc9
-
+selene==2.0.0b13
+selenium==4.15.2
 
